@@ -15,9 +15,11 @@ Quand un appareil se connecte, il demande une configuration au serveur DHCP. Le 
 
 ## Modifier la plage DHCP
 
-Pour modifier manuellement les paramètres du DHCP, il faut d’abord modifier le **sous-réseau IP** afin qu’il corresponde aux adresses IP de début et de fin configurées dans la plage DHCP.
+Pour modifier manuellement les paramètres du DHCP, les adresses IP de début et de fin doivent appartenir au **même sous-réseau** que le réseau configuré.
 
-Par exemple, si la plage DHCP commence à `192.168.1.100` et se termine à `192.168.1.200`, le sous-réseau doit être compatible avec ces adresses, par exemple `192.168.1.0/24`.
+Le sous-réseau n’a pas nécessairement à être modifié en premier. Si les adresses choisies pour la plage DHCP sont dans une classe ou un sous-réseau différent, il faut plutôt ajuster la plage DHCP pour qu’elle corresponde au sous-réseau utilisé.
+
+Par exemple, si le sous-réseau est `192.168.1.0/24`, la plage DHCP doit contenir des adresses comme `192.168.1.100` à `192.168.1.200`. On ne peut pas utiliser une plage comme `10.0.0.100` à `10.0.0.200`, car ces adresses appartiennent à un autre sous-réseau.
 
 ## Adresse IP
 
@@ -65,7 +67,7 @@ Le serveur DHCP participe aussi à la sécurité parce qu’il attribue les conf
 ## À retenir
 
 - Le **DHCP** attribue automatiquement les configurations réseau.
-- Pour modifier la plage DHCP, le sous-réseau doit correspondre aux adresses de début et de fin.
+- La plage DHCP doit appartenir au même sous-réseau que le réseau configuré.
 - Le **NAT** permet à une VM d’accéder à Internet par l’hôte.
 - Le **routeur** achemine le trafic entre les réseaux.
 - Le **pare-feu** filtre le trafic pour protéger le réseau.
