@@ -13,6 +13,12 @@ Il peut fournir :
 
 Quand un appareil se connecte, il demande une configuration au serveur DHCP. Le serveur lui attribue alors une adresse IP disponible pour une durée limitée, appelée un **bail**.
 
+## Modifier la plage DHCP
+
+Pour modifier manuellement les paramètres du DHCP, il faut d’abord modifier le **sous-réseau IP** afin qu’il corresponde aux adresses IP de début et de fin configurées dans la plage DHCP.
+
+Par exemple, si la plage DHCP commence à `192.168.1.100` et se termine à `192.168.1.200`, le sous-réseau doit être compatible avec ces adresses, par exemple `192.168.1.0/24`.
+
 ## Adresse IP
 
 Une **adresse IP** permet d’identifier un appareil sur un réseau.
@@ -59,6 +65,7 @@ Le serveur DHCP participe aussi à la sécurité parce qu’il attribue les conf
 ## À retenir
 
 - Le **DHCP** attribue automatiquement les configurations réseau.
+- Pour modifier la plage DHCP, le sous-réseau doit correspondre aux adresses de début et de fin.
 - Le **NAT** permet à une VM d’accéder à Internet par l’hôte.
 - Le **routeur** achemine le trafic entre les réseaux.
 - Le **pare-feu** filtre le trafic pour protéger le réseau.
