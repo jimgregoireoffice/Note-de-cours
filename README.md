@@ -7,3 +7,4 @@ Bienvenue dans mon dépôt de notes pour mes cours en soutien informatique.
 Notes et laboratoires réalisés avec **VMware Workstation Pro**.
 
 - [DHCP, NAT, routeur et pare-feu](virtualisation/01-dhcp.md)
+- [Notions essentielles de la virtualisation](virtualisation/02-notions-essentielles.md)
