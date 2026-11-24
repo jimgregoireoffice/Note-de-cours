@@ -6,7 +6,7 @@ Bienvenue dans mon dépôt de notes pour mes cours en soutien informatique.
 
 Notes sur les réseaux locaux, l’adressage IP, le DHCP, le NAT, les routeurs et les pare-feu.
 
-- [DHCP, NAT, routeur et pare-feu](reseaux-locaux/01-dhcp.md)
+- [Notions de base des réseaux locaux](reseaux-locaux/01-notions-de-base.md)
 
 ## Virtualisation
 
