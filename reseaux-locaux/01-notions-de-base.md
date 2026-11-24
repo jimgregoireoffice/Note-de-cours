@@ -99,6 +99,10 @@ Il existe deux types d’adresses IP :
 
 Plusieurs appareils d’un même réseau local peuvent avoir des adresses IP privées différentes, mais ils partagent souvent une seule adresse IP publique pour accéder à Internet.
 
+### Vidéo explicative
+
+[Regarder la vidéo : comprendre l’adresse IP](https://www.youtube.com/watch?v=Oc7Ts8tVjyE&t=4s)
+
 ## Le masque de sous-réseau
 
 Le **masque de sous-réseau** indique quelle partie de l’adresse IP identifie le réseau et quelle partie identifie l’appareil.
