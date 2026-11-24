@@ -12,6 +12,18 @@ Elle est utile pour :
 - Simuler plusieurs ordinateurs pour pratiquer les réseaux.
 - Réduire l’utilisation de plusieurs ordinateurs physiques.
 
+## Vocabulaire important
+
+| Terme | Signification simple |
+|---|---|
+| **VM** | Machine virtuelle : un ordinateur créé à l’intérieur d’un autre ordinateur. |
+| **Hôte** | L’ordinateur physique sur lequel VMware est installé. |
+| **Invité** | Le système d’exploitation installé dans la machine virtuelle. |
+| **Hyperviseur** | Le logiciel qui crée et gère les machines virtuelles. |
+| **ISO** | Fichier d’installation d’un système d’exploitation. |
+| **Snapshot** | Instantané qui permet de revenir à un état antérieur de la VM. |
+| **Clone** | Copie d’une machine virtuelle. |
+
 ## L’ordinateur hôte et la machine invitée
 
 - **Hôte** (*host*) : l’ordinateur physique sur lequel le logiciel de virtualisation est installé.
@@ -89,9 +101,9 @@ Le choix du mode réseau détermine comment la VM communique avec l’hôte, les
 
 | Mode | Fonctionnement | Utilisation courante |
 |---|---|---|
-| **NAT** | La VM partage la connexion Internet de l’hôte grâce à la traduction d’adresses. | Accéder à Internet facilement depuis la VM. |
-| **Bridged** | La VM est connectée directement au réseau physique, comme un autre ordinateur du réseau local. | Donner à la VM une adresse IP sur le même réseau que l’hôte. |
-| **Host-only** | La VM communique uniquement avec l’hôte et les autres VM du même réseau virtuel. | Créer un laboratoire isolé sans accès à Internet. |
+| **NAT** | La VM reçoit une adresse IP dans un réseau virtuel et accède à Internet grâce à l’hôte. | Accéder à Internet facilement depuis la VM. |
+| **Bridged** | La VM est connectée au réseau physique de l’hôte et peut recevoir une adresse IP du même réseau local. | Faire apparaître la VM comme un autre ordinateur du réseau local. |
+| **Host-only** | La VM peut communiquer avec l’hôte et les autres VM du même réseau virtuel, mais n’a pas accès à Internet par défaut. | Créer un laboratoire isolé pour pratiquer sans affecter le réseau réel. |
 
 ## Clonage
 
@@ -102,6 +114,17 @@ Il existe généralement deux types de clones :
 - **Clone lié** (*linked clone*) : occupe moins d’espace, mais dépend de la VM originale.
 - **Clone complet** (*full clone*) : copie indépendante de la VM originale.
 
+## Sécurité dans les laboratoires
+
+Même si une machine virtuelle est isolée, il faut adopter de bonnes pratiques de sécurité :
+
+- Ne pas installer de logiciels provenant de sources inconnues.
+- Ne pas entrer de mots de passe personnels dans une VM de laboratoire.
+- Ne pas utiliser une VM de test pour des activités illégales.
+- Créer un instantané avant une modification importante.
+- Garder les systèmes à jour lorsque c’est possible.
+- Supprimer les VM inutilisées pour libérer de l’espace disque.
+
 ## Bonnes pratiques
 
 - Nommer clairement les VM, par exemple `VM-Windows-Server-2022` ou `VM-Ubuntu-Client`.
@@ -111,7 +134,6 @@ Il existe généralement deux types de clones :
 - Utiliser le mode host-only pour un laboratoire isolé.
 - Garder les fichiers ISO et les machines virtuelles dans un dossier organisé.
 - Faire des sauvegardes régulières des VM importantes.
-- Désactiver ou supprimer les VM inutilisées pour libérer de l’espace disque.
 
 ## À retenir
 
