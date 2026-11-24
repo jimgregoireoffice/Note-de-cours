@@ -41,16 +41,63 @@ Dans plusieurs maisons, le routeur et le point d’accès Wi-Fi sont combinés d
 
 ## L’adresse IP
 
-Une **adresse IP** permet d’identifier un appareil sur un réseau. C’est un peu comme une adresse postale : elle permet d’envoyer l’information au bon appareil.
+Une **adresse IP** (*Internet Protocol address*, ou adresse du protocole Internet) est un numéro attribué à chaque appareil qui se connecte à un réseau.
 
-Exemple d’adresse IP : `192.168.1.25`
+Cet appareil peut être :
+
+- Un ordinateur.
+- Un téléphone cellulaire.
+- Une tablette.
+- Une imprimante.
+- Une console de jeux.
+- Une télévision intelligente.
+- Un réfrigérateur intelligent.
+- Un routeur.
+
+L’adresse IP permet d’identifier l’appareil sur le réseau et de lui envoyer des informations. C’est un peu comme une adresse postale : elle permet de savoir où envoyer les données.
+
+### Adresse IPv4
+
+L’**IPv4** (*Internet Protocol version 4*) est le format d’adresse IP le plus connu.
+
+Une adresse IPv4 est composée de **quatre séries de chiffres**, séparées par des points. Chaque série peut aller de **0 à 255**.
+
+Exemple :
+
+```text
+192.168.1.25
+```
+
+Autres exemples :
+
+```text
+10.0.0.5
+172.16.10.20
+192.168.0.100
+```
+
+Chaque appareil connecté à un réseau doit avoir une adresse IP pour pouvoir communiquer avec les autres appareils.
+
+### Adresse IPv6
+
+Comme le nombre d’adresses IPv4 disponibles est limité, un nouveau format a été créé : l’**IPv6** (*Internet Protocol version 6*).
+
+Une adresse IPv6 est plus longue et utilise des chiffres ainsi que des lettres. Elle permet de créer beaucoup plus d’adresses que l’IPv4.
+
+Exemple d’adresse IPv6 :
+
+```text
+2001:0db8:85a3:0000:0000:8a2e:0370:7334
+```
+
+### Adresse IP privée et publique
 
 Il existe deux types d’adresses IP :
 
-- **Adresse IP privée** : utilisée à l’intérieur d’un réseau local, par exemple `192.168.1.25`.
+- **Adresse IP privée** : utilisée à l’intérieur d’un réseau local, comme `192.168.1.25`.
 - **Adresse IP publique** : utilisée sur Internet et attribuée par le fournisseur Internet.
 
-Plusieurs appareils peuvent avoir des adresses IP privées différentes dans le même réseau local, mais ils partagent souvent une seule adresse IP publique pour accéder à Internet.
+Plusieurs appareils d’un même réseau local peuvent avoir des adresses IP privées différentes, mais ils partagent souvent une seule adresse IP publique pour accéder à Internet.
 
 ## Le masque de sous-réseau
 
@@ -197,6 +244,7 @@ Un serveur DHCP malveillant peut donner de mauvaises informations aux appareils,
 - Le **commutateur** relie les appareils d’un même réseau.
 - Le **routeur** relie différents réseaux, notamment le réseau local et Internet.
 - L’**adresse IP** identifie un appareil sur un réseau.
+- Une adresse **IPv4** contient quatre nombres allant de 0 à 255, séparés par des points.
 - Le **masque de sous-réseau** définit les limites du réseau.
 - La **passerelle par défaut** est généralement l’adresse du routeur.
 - Le **DNS** traduit les noms de sites Web en adresses IP.
