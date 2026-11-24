@@ -8,6 +8,7 @@ Notes sur les réseaux locaux, l’adressage IP, le DHCP, le NAT, les routeurs e
 
 - [Introduction — Réseaux locaux](reseaux-locaux/00-introduction.md)
 - [Notions de base des réseaux locaux](reseaux-locaux/01-notions-de-base.md)
+- [Structures de réseaux](reseaux-locaux/02-structures-de-reseaux.md)
 
 ## Virtualisation
 
